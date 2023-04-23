@@ -1,0 +1,21 @@
+version: "2.4"
+networks:
+  custom-network:
+    name: custom-network
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.11.0.0/16
+          gateway: 172.11.0.1
+services:
+  skt-ms-config-server:
+    container_name: skt-ms-config-server
+    image: ms-config-server:1.0.0
+    mem_limit: 1024m
+    ports:
+      - "8888:8888"
+    environment:
+      ENCRYPT_KEY: ${ENCRYPT_KEY}
+    networks:
+      - custom-network

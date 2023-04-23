@@ -1,0 +1,59 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: skt-ms-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:alanzarate/skt-configurations.git
+          default-label: main
+          ignoreLocalSshSettings: true
+          privateKey: |
+                        -----BEGIN OPENSSH PRIVATE KEY-----
+                        b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
+                        NhAAAAAwEAAQAAAYEAlcc8MZyVomNsiQrybN1woow2KC9Gcw92ZnzTooi3tvsZc/bTy0X8
+                        upydBCtTG/UfGBmAuFZGBOh2//0iKUSh99Ei/4vOhu8yR4TXPiDAGSSM7ODAH7qf0WIgdw
+                        y/KGUf0Cpzj9L5jCMgJs8zAlkIjsIYwz7VoYfRam3+7sXF80mq/d13K4Y8tkQA8RoF0fPg
+                        gQEHPqA8FEORYVyU5R7bZ+SOmLf7KFyBuegbWXnydF9NqA/WdvdwFGZgS0X7zDjsXd1YmP
+                        +nNyIRhzoI1SWqwYr4/JFivD2TwRv8hVXySjZ2MuiEi6G9VAtXAqd0YvjxEbjjnC/pzeoo
+                        9N1ScD/Wv79eawcmLzzPMZRIr5V0WGLb87np4gK1OZItstcDnqSkagfAOJL+Jm5IS7VrW8
+                        6W7c4FAC2LE7WW5LvSZTkZ7ApS6tFzs3nSadiBpETAitvTcjgqW4Eo9gBzEZ/KLFd8boKT
+                        s1NouKhBpBYMoz6Xfh9Ufa50YLABRMqkWrt3cJgdAAAFiAmaGBwJmhgcAAAAB3NzaC1yc2
+                        EAAAGBAJXHPDGclaJjbIkK8mzdcKKMNigvRnMPdmZ806KIt7b7GXP208tF/LqcnQQrUxv1
+                        HxgZgLhWRgTodv/9IilEoffRIv+LzobvMkeE1z4gwBkkjOzgwB+6n9FiIHcMvyhlH9Aqc4
+                        /S+YwjICbPMwJZCI7CGMM+1aGH0Wpt/u7FxfNJqv3ddyuGPLZEAPEaBdHz4IEBBz6gPBRD
+                        kWFclOUe22fkjpi3+yhcgbnoG1l58nRfTagP1nb3cBRmYEtF+8w47F3dWJj/pzciEYc6CN
+                        UlqsGK+PyRYrw9k8Eb/IVV8ko2djLohIuhvVQLVwKndGL48RG445wv6c3qKPTdUnA/1r+/
+                        XmsHJi88zzGUSK+VdFhi2/O56eICtTmSLbLXA56kpGoHwDiS/iZuSEu1a1vOlu3OBQAtix
+                        O1luS70mU5GewKUurRc7N50mnYgaREwIrb03I4KluBKPYAcxGfyixXfG6Ck7NTaLioQaQW
+                        DKM+l34fVH2udGCwAUTKpFq7d3CYHQAAAAMBAAEAAAGAeD+kzA/y8pTwJnZre4utSlNXh5
+                        us6+OWI2JEZ1FsbbPbE4cvMxvVc90ZEqfV6bQ6apbPCS/6tyYLpCoOqyM3BkcZ2iDchuiz
+                        bUfxpyeUEpuNqQAoP1ENzoUBm5LYRg4qJG5wqR+wyhnJTl87jL7+Z97dEqP3z9/C+bel3P
+                        1bl5+lcHvFmWQEijC+sNM7qPwrWmcA8f6jPYGhzpEN2YWUkSymb2YGdrkOTbtTedq2FUgO
+                        iMduX8T4buhilwxww91ObP/21rmEmzJevlXPcfE9ccnDUebZfK7xXurX6QgHe41iql7Jeo
+                        28ux7dSWE0Lod4hBQW8zaOKfaKH28QZEL87M6+ngcqPkC0oA6KelZ5uV/yoiNzVEu2yux6
+                        CYiReT0RBpO2b8l67fh6Q0qNeVoMVoLGU0JVnb8iXeXtTwv6Y8FHgUuFsG4/tjKzou6wa8
+                        pbyBBRADwJuqZPUqDgS479aRe5t2tPsUc1T/+mhQiRJcH4T9TlcHl0boRQUeNZpeDhAAAA
+                        wFE+9e8+vSlgRHt67Y6cBLoMj3Kp1NpGp2t5D8SsEmtC15sJsbp2IoJLPMqs7Wt+Qx2hsl
+                        jDHMXLowYDs2lyJz55xcDFNkRtC53k/e5NDgN6TFAuWk1vgwZEDL7dSSrrmSGNCzyAeJSU
+                        rB5LO5QUze/eyVJcNmcs7zChIlhd0aEXm+5A6S1mWt5LHqpoD0nBaw1MGaQ6OcUrliIzA5
+                        B4PVn0NshuztfXZ4VSW2eAYiJxm7LCYbJXMjpgFE2iDtD0XgAAAMEAxSI3YaI3fC9YMHyj
+                        yofp8KdDuemgYttnU7TqaiYCx84VXoVQDk4b/HlcVgvPWwGcCM4MwUvdUVUObHKf7r3emk
+                        7XRoYnNvA/fHvNn7qPQhYA9/WPN1ujm7OOErfSTPiwXfuzjCjQjPBZGNUbIFS5U+Qh6RMN
+                        XtgjqtkZcxIUWPYzyjFWV/v/KQwTTFNTa5337WO0jWCObIfkf4aw7qWU7V4QEra8SXBXEh
+                        yrAYj5tuwzyDWN06dP9uxMYuKsGc3nAAAAwQDCgPWW4a6vgnWH1tKSzmkbRrRi35kSsj+q
+                        ffalcaLQCVXup2Fcon4mqjAJhplRAgB5xezPsWcPJUGpL0MNOghq0oVKO0hacyjULhwfiV
+                        6He0+CpXYR697d9fQZZRWsrpbOuC8QmrPZdzMQIg0v4RApADSlA/M3Wj0FJJDArKOk7Tic
+                        HXQPTIweQvuvtEzNru6yRczf2hqGH5FyS+siS9eVl2cZwae9xXztL829CccfgIRiHJZXou
+                        I7Ln4pLxwFgVsAAAASbGFucGxheUBsYW5wbGF5LXBjAQ==
+                        -----END OPENSSH PRIVATE KEY-----
+ 
+
+
+
+encrypt:
+  config:
+    import: optional:file:.env[.properties]
+  key: ${ENCRYPT_KEY}
